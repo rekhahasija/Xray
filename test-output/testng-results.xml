@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-18T00:44:02 IST" name="All Test Suite" finished-at="2023-06-18T00:44:05 IST" duration-ms="3046">
+  <suite started-at="2023-06-18T01:12:35 IST" name="All Test Suite" finished-at="2023-06-18T01:12:39 IST" duration-ms="4548">
     <groups>
     </groups>
-    <test started-at="2023-06-18T00:44:02 IST" name="Test" finished-at="2023-06-18T00:44:05 IST" duration-ms="3046">
+    <test started-at="2023-06-18T01:12:35 IST" name="Test" finished-at="2023-06-18T01:12:39 IST" duration-ms="4548">
       <class name="XrayTest">
-        <test-method is-config="true" signature="firstTestSetUp()[pri:0, instance:XrayTest@397fbdb]" started-at="2023-06-18T00:44:02 IST" name="firstTestSetUp" finished-at="2023-06-18T00:44:04 IST" duration-ms="2138" status="PASS">
+        <test-method is-config="true" signature="firstTestSetUp()[pri:0, instance:XrayTest@3590fc5b]" started-at="2023-06-18T01:12:35 IST" name="firstTestSetUp" finished-at="2023-06-18T01:12:38 IST" duration-ms="3010" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- firstTestSetUp -->
-        <test-method signature="FirstTest()[pri:0, instance:XrayTest@397fbdb]" started-at="2023-06-18T00:44:04 IST" name="FirstTest" finished-at="2023-06-18T00:44:05 IST" duration-ms="835" status="PASS">
+        <test-method signature="FirstTest()[pri:0, instance:XrayTest@3590fc5b]" started-at="2023-06-18T01:12:38 IST" name="FirstTest" finished-at="2023-06-18T01:12:39 IST" duration-ms="1481" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- FirstTest -->

@@ -3,7 +3,7 @@
 <suite name="All Test Suite">
     <test name="Test">
         <classes>
-            <class name="XrayTest">
+            <class name="DemoTest">
             </class>
 
         </classes>

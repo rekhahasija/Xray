@@ -50,7 +50,11 @@
             <artifactId>xray-client-java</artifactId>
             <version>0.3.0</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.atlassian.jira</groupId>
+            <artifactId>jira-rest-java-client-api</artifactId>
+            <version>4.0.0</version>
+        </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>

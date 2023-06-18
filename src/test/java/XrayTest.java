@@ -3,6 +3,8 @@ import com.atlassian.jira.rest.client.api.JiraRestClient;
 import com.atlassian.jira.rest.client.api.JiraRestClientFactory;
 import com.atlassian.jira.rest.client.api.domain.Issue;
 import com.atlassian.jira.rest.client.api.domain.Transition;
+import com.atlassian.jira.rest.client.api.domain.input.IssueInput;
+import com.atlassian.jira.rest.client.api.domain.input.IssueInputBuilder;
 import com.atlassian.jira.rest.client.api.domain.input.TransitionInput;
 import com.atlassian.jira.rest.client.internal.async.AsynchronousJiraRestClientFactory;
 import org.openqa.selenium.WebDriver;
@@ -24,7 +26,7 @@ public class XrayTest {
             JiraRestClientFactory factory = new AsynchronousJiraRestClientFactory();
             URI uri = new URI("https://mayank8377890466.atlassian.net");
             //jira = factory.createWithBasicHttpAuthentication(uri, "BD5309E6EJEA46E0822CB786E2A3BAFC", "d2753b8b811f8c93554c8db6cb7e5c8f8ee8a0ee08596e9b4e4659ac676eaf7d");
-            jira = factory.createWithBasicHttpAuthentication(uri, "mayank8377890466@gmail.com", "ATATT3xFfGF0kRZtsQ2FTvoU-k7U3b6hJXN1Z1dSprOPdWy5q11nULt2sWqCC_96YLIZ_PGarnaWgCd-ljNY05_dnsuH-OVPzktcCD-YuFpLPv8qMtGU-nlNpn_vkxSFUpGkkfEWMgRxkhJKQ2jeeQlZQJXVdMjF84PqtZzNio5Xf8ccG69pxUk=3FA137A8");
+            jira = factory.createWithBasicHttpAuthentication(uri, "mayank8377890466@gmail.com", "ATATT3xFfGF0YHKIeyJOLQsuVnLEkYwDJyyoerOUK6il1LAAmb37eUAv6NkJtb64U38zKn_Qcgp8WXLkBhDzlDKBODp5FkZb5lIV6kRUhLKbfS13mw1rR39jhcztVGji609r1epOnBPAiXBHTf8YsKLFcVlu4yrF8MOMCle1p8Mt32io7G5OZds=1A389D3E");
             String issueKey = "SEL-2";
             Issue issue = jira.getIssueClient().getIssue(issueKey).claim();
             System.out.println("Issue Summary: " + issue.getSummary());
@@ -45,9 +47,17 @@ public class XrayTest {
     public void FirstTest() {
         System.out.println("Hello 1");
         updateTestResult("SEL-3", "Pass");
+        updateIssueDescription("SEL-3","Executed with Selenium again");
     }
 
-
+    public void updateIssueDescription(String issueKey, String newDescription) {
+        IssueInput input = new IssueInputBuilder()
+                .setDescription(newDescription)
+                .build();
+        jira.getIssueClient()
+                .updateIssue(issueKey, input)
+                .claim();
+    }
 
 
     private void updateTestResult(String testCaseId, String result) {
